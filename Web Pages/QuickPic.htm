@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <title>Quick Picture </title>
+    <script language="javascript" src="ClientGlobalContext.js.aspx" type="text/javascript"></script>
+    <script language="javascript" src="clapter_jquery1.4.1.min.js" type="text/javascript"></script>
+    <script language="javascript" src="clapter_json2.js" type="text/javascript"></script>
+    <script language="javascript" src="clapter_QuickPic.js" type="text/javascript"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <div id="divQuickPic" align="center">
+        <div id="divImage" style="z-index: -1">
+            <img id="imgPreview" alt="Add a Quick Pic" src="" />
+        </div>
+        <div id="divFileSelect">
+            <label style="font-weight: bold">
+                Select a Photo:</label><input name="iptPic" id="element_photo" onchange="SetPicture(this.files)"
+                    type="file" accept="image/gif,image/jpeg,image/png" />
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        if (XRM.Page.ui.getFormType() != 2) {
+            $('#divQuickPic').hide();
+        }
+        else {
+            LoadImage();
+            $('#divImage').css('position', 'fixed');
+            $('#divImage').css('top', '0px');
+            $('#divFileSelect').css('position', 'relative');
+            $('#divFileSelect').css('top', (height - 0.25 * height) + 'px');
+            $('#divFileSelect').css('width', width * 3/5 + 'px');
+        }
+    </script>
+</body>
+</html>
