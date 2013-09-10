@@ -1,0 +1,8 @@
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Release\UNIZAP.Addon.QuickPic.dll
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Release\UNIZAP.Addon.QuickPic.pdb
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Release\microsoft.xrm.client.dll
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Release\microsoft.xrm.sdk.dll
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Release\microsoft.xrm.client.xml
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Release\microsoft.xrm.sdk.xml
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Release\UNIZAP.Addon.QuickPic.dll
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Release\UNIZAP.Addon.QuickPic.pdb

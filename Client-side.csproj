@@ -37,8 +37,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\Constants.js" />
     <Content Include="Scripts\QuickPic.js" />
+    <Content Include="Scripts\QuickPic_DeObfs.js" />
     <Content Include="Web Pages\QuickPic.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

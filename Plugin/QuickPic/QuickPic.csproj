@@ -8,10 +8,11 @@
     <ProjectGuid>{0DF6DF67-80AD-469A-B545-C6DB53F742D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuickPic</RootNamespace>
-    <AssemblyName>QuickPic</AssemblyName>
+    <RootNamespace>UNIZAP.Addon.QuickPic</RootNamespace>
+    <AssemblyName>UNIZAP.Addon.QuickPic</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,14 +35,14 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Clapter_Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>UNIZAP_KEY.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="microsoft.xrm.client">
-      <HintPath>D:\Mayank\CRM\SDK 5.0.12\sdk\bin\microsoft.xrm.client.dll</HintPath>
+      <HintPath>..\..\..\..\..\IOTAP\CRM\SDK 5.0.9\sdk\bin\microsoft.xrm.client.dll</HintPath>
     </Reference>
     <Reference Include="microsoft.xrm.sdk">
-      <HintPath>D:\Mayank\CRM\SDK 5.0.12\sdk\bin\microsoft.xrm.sdk.dll</HintPath>
+      <HintPath>..\..\..\..\..\IOTAP\CRM\SDK 5.0.9\sdk\bin\microsoft.xrm.sdk.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,12 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LicenseManager.cs" />
     <Compile Include="PluginInfo.cs" />
     <Compile Include="QuickPicData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Clapter_Key.snk" />
+    <None Include="UNIZAP_KEY.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -68,4 +70,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>if defined EAZFUSCATOR_NET_HOME (if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.9) else (echo Eazfuscator.NET obfuscator is not installed on this machine. Obfuscation will be skipped.)</PostBuildEvent>
+  </PropertyGroup>
 </Project>

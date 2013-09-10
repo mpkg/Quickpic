@@ -1,0 +1,21 @@
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\QuickPic.dll
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\QuickPic.pdb
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\obj\Debug\QuickPic.dll
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\obj\Debug\QuickPic.pdb
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\microsoft.xrm.client.dll
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\microsoft.xrm.sdk.dll
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\Microsoft.Xrm.Sdk.Deployment.dll
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\microsoft.xrm.client.xml
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\microsoft.xrm.sdk.xml
+C:\Users\mgadodia\Desktop\Client-side\Plugin\QuickPic\bin\Debug\Microsoft.Xrm.Sdk.Deployment.xml
+D:\Unizap\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\ResolveAssemblyReference.cache
+D:\Unizap\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.dll
+D:\Unizap\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.pdb
+D:\Unizap\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.dll
+D:\Unizap\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.pdb
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\QuickPic.csprojResolveAssemblyReference.cache
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.dll
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.dll
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.pdb
+D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.pdb

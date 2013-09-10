@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Clapter.QuickPic.Plugin.Constants
+namespace UNIZAP.Addon.QuickPic.Constants
 {
     public static class PluginInfo
     {
