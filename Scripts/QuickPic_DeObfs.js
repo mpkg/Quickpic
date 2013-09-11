@@ -10,7 +10,7 @@
             image.attr('src', Alt_ImageText);
         }
         image.attr('width', imageWidth);
-        image.attr('height', height);
+        image.attr('height', imageHeight);
         $(divImage).css('left', imageLeftPosition + 'px');
         ToggleFileSelect();
     }
@@ -34,7 +34,7 @@
             }
             image.attr('src', e.target.result);
             image.attr('width', imageWidth);
-            image.attr('height', height);
+            image.attr('height', imageHeight);
             $(divImage).css('left', imageLeftPosition + 'px');
             var quickPicData = new Object();
             quickPicData.unizap_JSImageText = e.target.result;
@@ -183,6 +183,7 @@
     var XrmObject = window.parent.Xrm;
     var width = document.documentElement.clientWidth;
     var height = document.documentElement.clientHeight;
+    var imageHeight = height * 4 / 5;
     var imageWidth = width * 3 / 5;
     var imageLeftPosition = width * 1 / 5;
     var ODATA_URL = XrmObject.Page.context.prependOrgName('/XRMServices/2011/OrganizationData.svc');

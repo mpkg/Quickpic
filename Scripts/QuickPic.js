@@ -10,10 +10,9 @@
             image.attr('src', Alt_ImageText);
         }
         image.attr('width', imageWidth);
-        image.attr('height', height);
+        image.attr('height', imageHeight);
         $(divImage).css('left', imageLeftPosition + 'px');
         ToggleFileSelect();
-
     }
 
     var _0x8fb5 = ["onload", "length", "result", "target", "src", "attr", "width", "height", "left", "px", "css", "unizap_JSImageText", "unizap_RecordGUID", "unizap_EntityName", "", "readAsDataURL", "/", "?", "unizap_ImageText,unizap_quickpicdataId", "unizap_RecordGUID eq \x27", "\x27 and unizap_EntityName eq \x27", "\x27", "$select = ", "\x26$filter = ", "GET", "application/json; charset=utf-8", "json", "Accept", "application/json", "setRequestHeader", "results", "d", "unizap_ImageText", "unizap_quickpicdataId", "OData Retrieve Failed: ", " ; Error – ", "responseText", "ajax"]
@@ -34,7 +33,7 @@
             }
             _0xc7cfx3[_0x8fb5[5]](_0x8fb5[4], _0xc7cfx5[_0x8fb5[3]][_0x8fb5[2]]);
             _0xc7cfx3[_0x8fb5[5]](_0x8fb5[6], imageWidth);
-            _0xc7cfx3[_0x8fb5[5]](_0x8fb5[7], height);
+            _0xc7cfx3[_0x8fb5[5]](_0x8fb5[7], imageHeight);
             $(divImage)[_0x8fb5[10]](_0x8fb5[8], imageLeftPosition + _0x8fb5[9]);
             var _0xc7cfx6 = new Object();
             _0xc7cfx6[_0x8fb5[11]] = _0xc7cfx5[_0x8fb5[3]][_0x8fb5[2]];
@@ -176,6 +175,7 @@
     var XrmObject = window.parent.Xrm;
     var width = document.documentElement.clientWidth;
     var height = document.documentElement.clientHeight;
+    var imageHeight = height * 4 / 5;
     var imageWidth = width * 3 / 5;
     var imageLeftPosition = width * 1 / 5;
     var ODATA_URL = XrmObject.Page.context.prependOrgName('/XRMServices/2011/OrganizationData.svc');

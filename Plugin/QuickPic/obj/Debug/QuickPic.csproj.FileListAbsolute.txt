@@ -19,3 +19,7 @@ D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.dll
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.pdb
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.pdb
+C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.dll
+C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.pdb
+C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.dll
+C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.pdb
