@@ -15,72 +15,64 @@
         ToggleFileSelect();
     }
 
-    function SetPicture(files) {
-        var image = $(divImgPreview);
-        var reader;
+    var _0x8fb5 = ["onload", "length", "result", "target", "src", "attr", "width", "height", "left", "px", "css", "unizap_JSImageText", "unizap_RecordGUID", "unizap_EntityName", "", "readAsDataURL", "/", "?", "unizap_ImageText,unizap_quickpicdataId", "unizap_RecordGUID eq \x27", "\x27 and unizap_EntityName eq \x27", "\x27", "$select = ", "\x26$filter = ", "GET", "application/json; charset=utf-8", "json", "Accept", "application/json", "setRequestHeader", "results", "d", "unizap_ImageText", "unizap_quickpicdataId", "OData Retrieve Failed: ", " ; Error – ", "responseText", "ajax"]
+    function SetPicture(_0xc7cfx2) {
+        var _0xc7cfx3 = $(divImgPreview);
+        var _0xc7cfx4;
         try {
-            reader = new FileReader();
-        } catch (err) {
+            _0xc7cfx4 = new FileReader();
+        }
+        catch (err) {
             alert(HTML5AlertMsg);
             return;
         }
-
-        reader.onload = function (e) {
-            // e.target.result holds the DataURL which
-            // can be used as a source of the image:
-            if (e.target.result.length > max_file_size) {
+        _0xc7cfx4[_0x8fb5[0]] = function (_0xc7cfx5) {
+            if (_0xc7cfx5[_0x8fb5[3]][_0x8fb5[2]][_0x8fb5[1]] > max_file_size) {
                 alert(FileSizeBigMsg);
                 return;
             }
-            image.attr('src', e.target.result);
-            image.attr('width', imageWidth);
-            image.attr('height', imageHeight);
-            $(divImage).css('left', imageLeftPosition + 'px');
-            var quickPicData = new Object();
-            quickPicData.unizap_JSImageText = e.target.result;
-            quickPicData.unizap_RecordGUID = RecordID;
-            quickPicData.unizap_EntityName = EntityName;
-            if (QuickPicDataId == '' || QuickPicDataId == null) {
-                CreateRecord(quickPicData);
+            _0xc7cfx3[_0x8fb5[5]](_0x8fb5[4], _0xc7cfx5[_0x8fb5[3]][_0x8fb5[2]]);
+            _0xc7cfx3[_0x8fb5[5]](_0x8fb5[6], imageWidth);
+            _0xc7cfx3[_0x8fb5[5]](_0x8fb5[7], imageHeight);
+            $(divImage)[_0x8fb5[10]](_0x8fb5[8], imageLeftPosition + _0x8fb5[9]);
+            var _0xc7cfx6 = new Object();
+            _0xc7cfx6[_0x8fb5[11]] = _0xc7cfx5[_0x8fb5[3]][_0x8fb5[2]];
+            _0xc7cfx6[_0x8fb5[12]] = RecordID;
+            _0xc7cfx6[_0x8fb5[13]] = EntityName;
+            if (QuickPicDataId == _0x8fb5[14] || QuickPicDataId == null) {
+                CreateRecord(_0xc7cfx6);
             }
             else {
-                UpdateRecord(QuickPicDataId, quickPicData);
+                UpdateRecord(QuickPicDataId, _0xc7cfx6);
             }
             ToggleFileSelect();
-        };
-
-        // Reading the file as a DataURL. When finished,
-        // this will trigger the onload function above:
-        reader.readAsDataURL(files[0]);
+        }
+	;
+        _0xc7cfx4[_0x8fb5[15]](_0xc7cfx2[0]);
     }
-
+    ;
     function RetreiveImageURL() {
-        var odataUri = ODATA_URL + "/" + ODATA_QUICKPICKDATA + "?";
-        var select = "unizap_ImageText,unizap_quickpicdataId";
-        var filter = "unizap_RecordGUID eq '" + RecordID + "' and unizap_EntityName eq '" + EntityName + "'";
-        odataUri += "$select = " + select;
-        odataUri += "&$filter = " + filter;
-        $.ajax({
-            async: false,
-            type: "GET",
-            contentType: "application/json; charset=utf-8",
-            datatype: "json",
-            url: odataUri,
-            beforeSend: function (XMLHttpRequest) {
-                //Specifying this header ensures that the results will be returned as JSON.
-                XMLHttpRequest.setRequestHeader("Accept", "application/json");
-            },
-            success: function (data, textStatus, XmlHttpRequest) {
-                if (data.d.results != null && data.d.results.length > 0) {
-                    ImageText = data.d.results[0].unizap_ImageText;
-                    QuickPicDataId = data.d.results[0].unizap_quickpicdataId;
-                }
-            },
-            error: function (XmlHttpRequest, textStatus, errorThrown) {
-                alert('OData Retrieve Failed: ' + odataUri + " ; Error – " + XmlHttpRequest.responseText);
-            }
+        var _0xc7cfx8 = ODATA_URL + _0x8fb5[16] + ODATA_QUICKPICKDATA + _0x8fb5[17];
+        var _0xc7cfx9 = _0x8fb5[18];
+        var _0xc7cfxa = _0x8fb5[19] + RecordID + _0x8fb5[20] + EntityName + _0x8fb5[21];
+        _0xc7cfx8 += _0x8fb5[22] + _0xc7cfx9;
+        _0xc7cfx8 += _0x8fb5[23] + _0xc7cfxa;
+        $[_0x8fb5[37]]({ async: false, type: _0x8fb5[24], contentType: _0x8fb5[25], datatype: _0x8fb5[26], url: _0xc7cfx8, beforeSend: function (_0xc7cfxb) {
+            _0xc7cfxb[_0x8fb5[29]](_0x8fb5[27], _0x8fb5[28]);
+        }
+	, success: function (_0xc7cfxc, _0xc7cfxd, _0xc7cfxe) {
+	    if (_0xc7cfxc[_0x8fb5[31]][_0x8fb5[30]] != null && _0xc7cfxc[_0x8fb5[31]][_0x8fb5[30]][_0x8fb5[1]] > 0) {
+	        ImageText = _0xc7cfxc[_0x8fb5[31]][_0x8fb5[30]][0][_0x8fb5[32]];
+	        QuickPicDataId = _0xc7cfxc[_0x8fb5[31]][_0x8fb5[30]][0][_0x8fb5[33]];
+	    }
+	}
+	, error: function (_0xc7cfxe, _0xc7cfxd, _0xc7cfxf) {
+	    alert(_0x8fb5[34] + _0xc7cfx8 + _0x8fb5[35] + _0xc7cfxe[_0x8fb5[36]]);
+	}
         });
     }
+    ;
+
 
     function ToggleFileSelect() {
         $(divFileSelect).hide();
@@ -161,8 +153,8 @@
         $('#loadingDiv').append('<p id="loadingText">' + text + '</p>')
                     .css('background', 'url(/_imgs/AdvFind/progress.gif) no-repeat center')
                     .css('background-color', '#CCCCCC')
-                    .css('height', height)
-                    .css('width', width)
+                    .css('height', '100px')
+                    .css('width', '300px')
                     .center()
                     .hide()  // hide it initially
                     .ajaxStart(function () {
