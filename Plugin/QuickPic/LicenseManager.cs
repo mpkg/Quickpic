@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xrm.Sdk.Query;
-using Microsoft.Xrm.Sdk;
 using System.Security.Cryptography;
-using System.Xml.Linq;
+using System.Text;
+using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Messages;
+using Microsoft.Xrm.Sdk.Query;
 
 namespace UNIZAP.Addon.QuickPic
 {
-    class LicenseManager
+    internal class LicenseManager
     {
-        IOrganizationService _crmService = null;
-        IPluginExecutionContext _context = null;
+        private IOrganizationService _crmService = null;
+        private IPluginExecutionContext _context = null;
         private const int TRIAL_NO_OF_DAYS = 2;
 
         public LicenseManager(ref IOrganizationService crmService, ref IPluginExecutionContext context)
@@ -151,6 +149,7 @@ namespace UNIZAP.Addon.QuickPic
                 }
             }
         }
+
         private bool CheckValidUserCount(int licenseUser, IOrganizationService _crmService, IPluginExecutionContext executionContext)
         {
             QueryExpression qe = new QueryExpression();
@@ -187,6 +186,7 @@ namespace UNIZAP.Addon.QuickPic
                 return false;
             }
         }
+
         private int ValidateOrg(string orgname)
         {
             string org = _context.OrganizationName;
@@ -202,6 +202,7 @@ namespace UNIZAP.Addon.QuickPic
                 return Result.LicenseValid;
             }
         }
+
         private static string Decrypt(string cipherString, bool useHashing)
         {
             byte[] keyArray;
@@ -262,6 +263,7 @@ namespace UNIZAP.Addon.QuickPic
         public const int LicenseInvalid = -3;
         public const int UserCountError = -4;
     }
+
     public class EntityName
     {
         public static readonly string Webresource = "webresource";
@@ -269,6 +271,7 @@ namespace UNIZAP.Addon.QuickPic
         public static readonly string Unit = "uomschedule";
         public static readonly string Solution = "solution";
     }
+
     public class EntityAttributes
     {
         public static readonly string Content = "content";

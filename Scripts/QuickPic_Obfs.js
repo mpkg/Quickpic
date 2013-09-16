@@ -25,12 +25,12 @@
             _0xc7cfx6[_0x8fb5[12]] = RecordID;
             _0xc7cfx6[_0x8fb5[13]] = EntityName;
             if (QuickPicDataId == _0x8fb5[14] || QuickPicDataId == null) {
-                CreateRecord(_0xc7cfx6);
+                createRecord(_0xc7cfx6);
             }
             else {
-                UpdateRecord(QuickPicDataId, _0xc7cfx6);
+                updateRecord(QuickPicDataId, _0xc7cfx6);
             }
-            ToggleFileSelect();
+            toggleFileSelect();
         }
 	;
         _0xc7cfx4[_0x8fb5[15]](_0xc7cfx2[0]);

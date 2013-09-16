@@ -33,12 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\left-arrow-right-hiee - Copy.png" />
+    <Content Include="Images\left-arrow-right-hiee.png" />
+    <Content Include="Scripts\DeObfs.js" />
     <Content Include="Scripts\QuickPic.js" />
-    <Content Include="Scripts\QuickPic_DeObfs.js" />
+    <Content Include="Scripts\QuickPic_Obfs.js" />
     <Content Include="Web Pages\QuickPic.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
