@@ -12,22 +12,25 @@
     <table id="tblQuickPic" style="width: 100%;">
         <tr>
             <td>
-                <div id="divBtnLeft" align="center">
+                <div id="divBtnLeft" align="center" class="browse">
                     <img alt="Browse Left" id='btnLeft' src="unizap_btnLeft.png" />
                 </div>
             </td>
             <td>
-                <div id="divQuickPic" align="center">
-                    <div id="divImage" style="z-index: -1">
+                <div id="divQuickPic" >
+                    <div id="divImage" style="z-index: -1" align="center">
                         <img id="imgPreview" alt="Add a Quick Pic" src="" />
                     </div>
                     <div id="divFileSelect">
-                        <input id="iptFile" onchange="AddPicture(this.files)" type="file" accept="image/gif,image/jpeg,image/png" />
+                        <img id="imgAdd" alt="Add Picture" src="unizap_btnAdd.png" />
+                        <img id="imgDelete" alt="Delete Picture" src="unizap_btnDelete.png" />
+                        <br /><input id="iptFile" onchange="addPicture(this.files)" type="file" accept="image/gif,image/jpeg,image/png"
+                            style="visibility: hidden" />
                     </div>
                 </div>
             </td>
             <td>
-                <div id="divBtnRight" align="center">
+                <div id="divBtnRight" align="center" class="browse">
                     <img alt="Browse Right" id='btnRight' src="unizap_btnRight.png" />
                 </div>
             </td>
@@ -38,18 +41,10 @@
             $('#tblQuickPic').hide();
         }
         else {
-            loadImage();
+            attachEvents();
+            initializeUI();
+            loadPicture(0);
         }
-        jQuery.fn.center = function () {
-            this.css("position", "absolute");
-            this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
-            this.css("left", (($(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
-            return this;
-        }
-        $(window).resize(function () {
-            location.reload();
-        });
-        ConfigureAjaxLoading('Processing Image...Please do not close the window!');
     </script>
 </body>
 </html>

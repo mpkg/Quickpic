@@ -2,3 +2,7 @@ D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\bin\Client-side.dll
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\bin\Client-side.pdb
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\obj\Release\Client-side.dll
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\obj\Release\Client-side.pdb
+C:\Users\USER\Documents\GitHub\Quickpic\bin\Client-side.dll
+C:\Users\USER\Documents\GitHub\Quickpic\bin\Client-side.pdb
+C:\Users\USER\Documents\GitHub\Quickpic\obj\Release\Client-side.dll
+C:\Users\USER\Documents\GitHub\Quickpic\obj\Release\Client-side.pdb
