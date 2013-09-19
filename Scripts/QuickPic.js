@@ -247,8 +247,8 @@
         }
         $('body').append('<div id="loadingDiv"></div>');
         $('#loadingDiv').css('background', 'url(/_imgs/AdvFind/progress.gif) no-repeat center')
-                    .css('height', '100px')
-                    .css('width', '300px')
+                    .css('height', imageWidth + 'px')
+                    .css('width', height + 'px')
                     .center()
                     .hide()  // hide it initially
                     .ajaxStart(function () {
@@ -257,6 +257,5 @@
                     .ajaxStop(function () {
                         $(this).hide();
                     });
-
     }
 }
