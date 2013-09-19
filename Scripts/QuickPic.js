@@ -157,7 +157,11 @@
             quickPicData.unizap_JSImageText = e.target.result;
             quickPicData.unizap_RecordGUID = RecordID;
             quickPicData.unizap_EntityName = EntityName;
-            createRecord(quickPicData);
+            try {
+                createRecord(quickPicData);
+            }
+            catch (e) {
+            }
         };
 
         // Reading the file as a DataURL. When finished,
@@ -174,17 +178,20 @@
     }
 
     function browse() {
-        if (this.id == 'divBtnLeft') {
-            displayPictureIndex--;
-            if (displayPictureIndex < 0)
-                displayPictureIndex = images.length - 1;
-            displayPicture(images[displayPictureIndex].unizap_ImageText);
-        }
-        else if (this.id == 'divBtnRight') {
-            displayPictureIndex++;
-            if (displayPictureIndex >= images.length)
-                displayPictureIndex = 0;
-            displayPicture(images[displayPictureIndex].unizap_ImageText);
+        try {
+            if (this.id == 'divBtnLeft') {
+                displayPictureIndex--;
+                if (displayPictureIndex < 0)
+                    displayPictureIndex = images.length - 1;
+                displayPicture(images[displayPictureIndex].unizap_ImageText);
+            }
+            else if (this.id == 'divBtnRight') {
+                displayPictureIndex++;
+                if (displayPictureIndex >= images.length)
+                    displayPictureIndex = 0;
+                displayPicture(images[displayPictureIndex].unizap_ImageText);
+            }
+        } catch (e) {
         }
     }
 
