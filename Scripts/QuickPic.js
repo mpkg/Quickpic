@@ -97,10 +97,12 @@
 
     function configureAddDeleteButtons() {
         if (images.length > 0) {
-            $(btnDelete).click(deletePicture);
+            $(btnDelete).attr('title', 'Click to delete this picture.')
+                        .click(deletePicture);
         }
         else {
-            $(btnDelete).unbind();
+            $(btnDelete).removeAttr("title")
+                        .unbind();
         }
 
         $(divQuickPic).mouseenter(function () {
@@ -122,7 +124,8 @@
 
     function retreivePictures(entityName, recordId) {
         var odataUri = ODATA_URL + "/" + ODATA_QUICKPICKDATA + "?";
-        var select = "unizap_ImageText,unizap_quickpicdataId";
+        //e-deobfs
+        var _0xe8ab = ["\x75\x6E\x69\x7A\x61\x70\x5F\x49\x6D\x61\x67\x65\x54\x65\x78\x74\x2C\x75\x6E\x69\x7A\x61\x70\x5F\x71\x75\x69\x63\x6B\x70\x69\x63\x64\x61\x74\x61\x49\x64"]; var select = _0xe8ab[0];
         var filter = "unizap_RecordGUID eq '" + recordId + "' and unizap_EntityName eq '" + entityName + "'";
         odataUri += "$select = " + select;
         odataUri += "&$filter = " + filter;

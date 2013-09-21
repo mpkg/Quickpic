@@ -24,4 +24,9 @@
     }
     catch (e) {
     }
-}  
+}
+
+//e
+{
+    var select = "unizap_ImageText,unizap_quickpicdataId";
+}
