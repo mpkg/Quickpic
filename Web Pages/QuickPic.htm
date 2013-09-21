@@ -38,8 +38,15 @@
         </tr>
     </table>
     <script type="text/javascript">
+        jQuery.fn.center = function () {
+            this.css("position", "absolute");
+            this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
+            this.css("left", (($(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+            return this;
+        }
         if (XrmObject.Page.ui.getFormType() != 2) {
             $('#tblQuickPic').hide();
+            $('body').text(NewRecordMesg).center();
         }
         else {
             attachEvents();
