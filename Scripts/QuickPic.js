@@ -23,7 +23,7 @@
     var imageWidth = clientWidth * 3 / 5;
     var imageHeight = clientHeight - 5;
     var imageLeftPosition = clientWidth * 1 / 5;
-    var fileControlLeftPosition = clientWidth * 2 / 5;
+    var fileControlLeftPosition = imageLeftPosition * 3 / 2;
     var images = new Array();
     var RecordID = XrmObject.Page.data.entity.getId();
     var EntityName = XrmObject.Page.data.entity.getEntityName();
@@ -39,7 +39,7 @@
             imageWidth = clientWidth * 3 / 5;
             imageHeight = clientHeight - 5;
             imageLeftPosition = clientWidth * 1 / 5;
-            fileControlLeftPosition = clientWidth * 2 / 5;
+            fileControlLeftPosition = imageLeftPosition * 3 / 2;
             initializeUI();
             $(imgPreview).attr('width', imageWidth);
             $(imgPreview).attr('height', imageHeight);
@@ -57,17 +57,23 @@
         $(divImage).css('position', 'fixed')
                    .css('left', imageLeftPosition + 'px')
                    .css('top', '0px');
-        $(divFileSelect).css('position', 'fixed')
-                        .css('left', fileControlLeftPosition + 'px')
-                        .css('top', (clientHeight - 0.25 * clientHeight) + 'px')
-                        .hide();
-        $(browseButtons).hide();
+
+        $(btnAdd).css('position', 'fixed')
+                 .css('left', fileControlLeftPosition + 'px')
+                 .css('top', (clientHeight - 0.25 * clientHeight) + 'px');
+        $(btnDelete).css('position', 'fixed')
+                    .css('right', fileControlLeftPosition + 'px')
+                    .css('top', (clientHeight - 0.25 * clientHeight) + 'px');
+
         $(leftButton).css("position", "fixed")
                      .css("top", (clientHeight / 2.5) + "px")
                      .css("left", (fileControlLeftPosition / 5 + "px"));
         $(rightButton).css("position", "fixed")
                      .css("top", (clientHeight / 2.5) + "px")
                      .css("right", (fileControlLeftPosition / 5 + "px"));
+
+        $(divFileSelect).hide();
+        $(browseButtons).hide();
     }
 
     function loadPicture(index) {
