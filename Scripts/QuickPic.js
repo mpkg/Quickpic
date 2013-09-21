@@ -45,12 +45,10 @@
             $(imgPreview).attr('height', imageHeight);
         });
         $(btnAdd).click(function () { $(fileUpload).trigger('click'); });
-        $(btnDelete).click(deletePicture);
-        $(browseButtons).click(browse);
     }
 
     function initializeUI() {
-        ConfigureAjaxLoading('Processing...');
+        ConfigureAjaxLoading();
 
         $(divQuickPic).width(imageWidth);
 
@@ -71,9 +69,6 @@
         $(rightButton).css("position", "fixed")
                      .css("top", (clientHeight / 2.5) + "px")
                      .css("right", (fileControlLeftPosition / 5 + "px"));
-
-        $(divFileSelect).hide();
-        $(browseButtons).hide();
     }
 
     function loadPicture(index) {
@@ -88,8 +83,36 @@
         else if (images.length > 1) {
             displayPicture(images[index].unizap_ImageText);
         }
-        toggleBrowseVisibility();
-        toggleFileSelect();
+
+        configureAddDeleteButtons();
+        configurebrowseButtons();
+    }
+
+    function configureAddDeleteButtons() {
+        if (images.length > 0) {
+            $(btnDelete).click(deletePicture);
+        }
+        else {
+            $(btnDelete).unbind();
+        }
+
+        $(divFileSelect).hide();
+
+        $(divQuickPic).mouseenter(function () {
+            $(divFileSelect).show();
+        }).mouseleave(function () {
+            $(divFileSelect).hide();
+        });
+    }
+
+    function configurebrowseButtons() {
+        $(browseButtons).click(browse);
+        if (images.length > 1) {
+            $(browseButtons).show();
+        }
+        else {
+            $(browseButtons).hide();
+        }
     }
 
     function retreivePictures(entityName, recordId) {
@@ -123,26 +146,6 @@
         $(imgPreview).attr('src', imageSrc);
         $(imgPreview).attr('width', imageWidth);
         $(imgPreview).attr('height', imageHeight);
-    }
-
-    function toggleBrowseVisibility() {
-        $(browseButtons).hide();
-        $('body').mouseenter(function () {
-            if (images.length > 1) {
-                $(browseButtons).fadeIn();
-            }
-        }).mouseleave(function () {
-            $(browseButtons).fadeOut();
-        });
-    }
-
-    function toggleFileSelect() {
-        $(divFileSelect).hide();
-        $(divQuickPic).mouseenter(function () {
-            $(divFileSelect).fadeIn();
-        }).mouseleave(function () {
-            $(divFileSelect).fadeOut();
-        });
     }
 
     function addPicture(files) {
@@ -261,7 +264,7 @@
         });
     }
 
-    function ConfigureAjaxLoading(text) {
+    function ConfigureAjaxLoading() {
         jQuery.fn.center = function () {
             this.css("position", "absolute");
             this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
