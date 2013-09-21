@@ -40,7 +40,6 @@
     <Content Include="Images\left-arrow-right-hiee.png" />
     <Content Include="Scripts\DeObfs.js" />
     <Content Include="Scripts\QuickPic.js" />
-    <Content Include="Scripts\QuickPic_Obfs.js" />
     <Content Include="Web Pages\QuickPic.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
