@@ -44,7 +44,10 @@
             $(imgPreview).attr('width', imageWidth);
             $(imgPreview).attr('height', imageHeight);
         });
-        $(btnAdd).click(function () { $(fileUpload).trigger('click'); });
+        $(btnAdd).click(function () {
+            $(divFileSelect).hide();
+            $(fileUpload).trigger('click');
+        });
     }
 
     function initializeUI() {
@@ -69,6 +72,7 @@
         $(rightButton).css("position", "fixed")
                      .css("top", (clientHeight / 2.5) + "px")
                      .css("right", (fileControlLeftPosition / 5 + "px"));
+        $(divFileSelect).hide();
     }
 
     function loadPicture(index) {
@@ -95,8 +99,6 @@
         else {
             $(btnDelete).unbind();
         }
-
-        $(divFileSelect).hide();
 
         $(divQuickPic).mouseenter(function () {
             $(divFileSelect).show();
