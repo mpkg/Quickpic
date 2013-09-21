@@ -21,6 +21,7 @@
     var clientWidth = $(window).width();
     var clientHeight = $(window).height();
     var imageWidth = clientWidth * 3 / 5;
+    var imageHeight = clientHeight - 5;
     var imageLeftPosition = clientWidth * 1 / 5;
     var fileControlLeftPosition = clientWidth * 2 / 5;
     var images = new Array();
@@ -36,11 +37,12 @@
             clientWidth = $(window).width();
             clientHeight = $(window).height();
             imageWidth = clientWidth * 3 / 5;
+            imageHeight = clientHeight - 5;
             imageLeftPosition = clientWidth * 1 / 5;
             fileControlLeftPosition = clientWidth * 2 / 5;
             initializeUI();
             $(imgPreview).attr('width', imageWidth);
-            $(imgPreview).attr('height', clientHeight);
+            $(imgPreview).attr('height', imageHeight);
         });
         $(btnAdd).click(function () { $(fileUpload).trigger('click'); });
         $(btnDelete).click(deletePicture);
@@ -114,7 +116,7 @@
     function displayPicture(imageSrc) {
         $(imgPreview).attr('src', imageSrc);
         $(imgPreview).attr('width', imageWidth);
-        $(imgPreview).attr('height', clientHeight);
+        $(imgPreview).attr('height', imageHeight);
     }
 
     function toggleBrowseVisibility() {
