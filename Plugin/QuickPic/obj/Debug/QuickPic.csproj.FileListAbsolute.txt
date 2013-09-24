@@ -23,3 +23,4 @@ C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.Q
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Debug\UNIZAP.Addon.QuickPic.pdb
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.dll
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Debug\UNIZAP.Addon.QuickPic.pdb
+C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Debug\QuickPic.csprojResolveAssemblyReference.cache

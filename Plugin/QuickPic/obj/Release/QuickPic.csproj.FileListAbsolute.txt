@@ -8,8 +8,5 @@ D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Release\UNIZAP.Addo
 D:\Office\UNIZAP\MSCRM Add-ons\Quick Pic\Plugin\QuickPic\obj\Release\UNIZAP.Addon.QuickPic.pdb
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Release\UNIZAP.Addon.QuickPic.dll
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Release\UNIZAP.Addon.QuickPic.pdb
-C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Release\microsoft.xrm.client.xml
-C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\bin\Release\microsoft.xrm.sdk.xml
-C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Release\QuickPic.csprojResolveAssemblyReference.cache
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Release\UNIZAP.Addon.QuickPic.dll
 C:\Users\USER\Documents\GitHub\Quickpic\Plugin\QuickPic\obj\Release\UNIZAP.Addon.QuickPic.pdb
