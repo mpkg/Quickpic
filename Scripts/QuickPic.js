@@ -29,6 +29,8 @@
     var RecordID = XrmObject.Page.data.entity.getId();
     var EntityName = XrmObject.Page.data.entity.getEntityName();
     var displayPictureIndex = 0;
+    var fileIndex = 1;
+    var reader;
 }
 
 //Functions
@@ -157,7 +159,6 @@
     }
 
     function addPicture(files) {
-        var reader;
         try {
             reader = new FileReader();
         } catch (err) {
@@ -173,7 +174,7 @@
                 return;
             }
             //c-deobfs
-            var _0xc799 = ["\x75\x6E\x69\x7A\x61\x70\x5F\x4A\x53\x49\x6D\x61\x67\x65\x54\x65\x78\x74", "\x72\x65\x73\x75\x6C\x74", "\x74\x61\x72\x67\x65\x74", "\x75\x6E\x69\x7A\x61\x70\x5F\x52\x65\x63\x6F\x72\x64\x47\x55\x49\x44", "\x75\x6E\x69\x7A\x61\x70\x5F\x45\x6E\x74\x69\x74\x79\x4E\x61\x6D\x65"]; var quickPicData = new Object(); quickPicData[_0xc799[0]] = e[_0xc799[2]][_0xc799[1]]; quickPicData[_0xc799[3]] = RecordID; quickPicData[_0xc799[4]] = EntityName; try { createRecord(quickPicData); } catch (e) { };
+            var _0xc799 = ["\x75\x6E\x69\x7A\x61\x70\x5F\x4A\x53\x49\x6D\x61\x67\x65\x54\x65\x78\x74", "\x72\x65\x73\x75\x6C\x74", "\x74\x61\x72\x67\x65\x74", "\x75\x6E\x69\x7A\x61\x70\x5F\x52\x65\x63\x6F\x72\x64\x47\x55\x49\x44", "\x75\x6E\x69\x7A\x61\x70\x5F\x45\x6E\x74\x69\x74\x79\x4E\x61\x6D\x65"]; var quickPicData = new Object(); quickPicData[_0xc799[0]] = e[_0xc799[2]][_0xc799[1]]; quickPicData[_0xc799[3]] = RecordID; quickPicData[_0xc799[4]] = EntityName; try { createRecord(quickPicData, files); } catch (e) { };
         };
 
         // Reading the file as a DataURL. When finished,
@@ -238,7 +239,7 @@
         });
     }
 
-    function createRecord(entityObject) {
+    function createRecord(entityObject, files) {
         var jsonEntity = window.JSON.stringify(entityObject);
 
         //synchronous AJAX function to Update a CRM record using OData
@@ -257,7 +258,15 @@
 
             success: function (data, textStatus, XmlHttpRequest) {
                 if (data != null && data.d != null && data.d.unizap_quickpicdataId != null) {
-                    loadPicture(images.length);
+                    //check for multiple files
+                    if (files.length > fileIndex) {
+                        reader.readAsDataURL(files[fileIndex]);
+                        fileIndex++;
+                    }
+                    else {
+                        loadPicture(images.length);
+                        fileIndex = 1;
+                    }
                 }
             },
 
