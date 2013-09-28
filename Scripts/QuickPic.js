@@ -63,10 +63,10 @@
                    .css('top', '0px');
 
         $(btnAdd).css('position', 'fixed')
-                 .css('left', fileControlLeftPosition + 'px')
+                 .css('left', fileControlLeftPosition/5 + 'px')
                  .css('top', (clientHeight - 0.25 * clientHeight) + 'px');
         $(btnDelete).css('position', 'fixed')
-                    .css('right', fileControlLeftPosition + 'px')
+                    .css('right', fileControlLeftPosition/5 + 'px')
                     .css('top', (clientHeight - 0.25 * clientHeight) + 'px');
 
         $(leftButton).css("position", "fixed")
@@ -107,7 +107,7 @@
                         .unbind();
         }
 
-        $(divQuickPic).mouseenter(function () {
+        $(window).mouseenter(function () {
             $(divFileSelect).show();
         }).mouseleave(function () {
             $(divFileSelect).hide();
